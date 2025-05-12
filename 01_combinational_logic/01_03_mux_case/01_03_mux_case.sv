@@ -32,5 +32,24 @@ module mux_4_1
   // Using code for mux_2_1 as an example,
   // write code for 4:1 mux using the "case" statement
 
+  always_comb
+    case (sel)
+      2'b00 : y = d0;
+      2'b01 : y = d1;
+      2'b10 : y = d2;
+      2'b11 : y = d3;
+    endcase
+
+
 
 endmodule
+
+
+/* syntax
+
+    verilog case statement begins with a case and ends with an endcase statement
+    
+    the key in qusetion is evaluted exactly once and compared against each of the cases
+    in the order in which they appear. 
+    
+    Use of the deafult case is optional. */
